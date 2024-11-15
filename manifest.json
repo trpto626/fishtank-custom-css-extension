@@ -1,12 +1,23 @@
 {
     "manifest_version": 2,
-    "name": "fishtank",
+    "name": "Fishtank Custom CSS",
     "version": "1.0",
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "fishtank-custom-css@example.com"
+      }
+    },
 
     "content_scripts": [
       {
         "matches": ["*://*.fishtank.live/*"],
         "css": ["fishtank.css"]
       }
-    ]
+    ],
+
+    "browser_action": {
+      "default_title": "Fishtank Custom CSS",
+      "default_popup": "popup/popup.html"
+    }
 }
